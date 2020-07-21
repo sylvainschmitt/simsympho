@@ -1,5 +1,7 @@
-*.o
-*.cpp.o
-*.gch
-/niche-hike
-/out.txt
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+src/*.o
+src/*.so
+src/*.dll
