@@ -33,7 +33,6 @@ List nichehiking_cpp(
 	DWS::TSample TFitS;
 	DWS::TSample DFitS;
 
-
 	NumericVector age_vec(agemax);
 	NumericVector tprop_vec(agemax);
 	NumericVector fit_vec(agemax);

@@ -7,7 +7,7 @@ This is a quick exploration of reusing the model from [Schwilt and Kerr (2002)](
 ## News
 
 * started integration as `Rcpp` package
-
+* fixed Rcpp
 ## ToDo
 
 * start versionning and all packageing stuff

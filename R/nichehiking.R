@@ -1,3 +1,21 @@
+#' Title
+#'
+#' @param grid 
+#' @param torch_init 
+#' @param cycles 
+#' @param agemax 
+#' @param changePeriod 
+#' @param mortRate 
+#' @param pneigh 
+#' @param sneigh 
+#' @param bneigh 
+#' @param mu 
+#' @param r 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 nichehiking <- function(
   grid = 100,
   torch_init = 0.005,

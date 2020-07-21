@@ -1,4 +1,4 @@
-Package: simsympho
+Package: symsympho
 Type: Package
 Title: What the Package Does in One 'Title Case' Line
 Version: 1.0
@@ -9,5 +9,3 @@ Description: One paragraph description of what the package does as one or more f
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.1)
 LinkingTo: Rcpp
-Suggests: 
-    testthat (>= 2.1.0)
