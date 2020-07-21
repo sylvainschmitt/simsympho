@@ -1,13 +1,6 @@
-Source code for flammability as "niche-hiking"
-==============================================
+# simsympho
 
-This is the source code for the simulation model presented in
+*I should probably change the name later.*
 
-Schwilk, D. W. and B. Kerr. 2002. Genetic niche hiking: an alternative explanation for the evolution of flammability. *Oikos* 99: 431-442.
-
-To compile:
-
-```
-g++ *.cpp -o niche-hike
-```
+This is a quick exploration of reusing the model from [Schwilt and Kerr (2002)](https://github.com/dschwilk/ms-data-Oikos-2002) to model the eco-evolutionnary dynamics of *Symphonia globulifera* with topography and forest gaps dynamics based on PhD results.
 
