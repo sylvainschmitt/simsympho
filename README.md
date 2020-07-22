@@ -8,6 +8,8 @@ This is a quick exploration of reusing the model from [Schwilt and Kerr (2002)](
 
 * started integration as `Rcpp` package
 * fixed Rcpp
+* `pkgdown`
+
 ## ToDo
 
 * start versionning and all packageing stuff

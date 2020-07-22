@@ -12,5 +12,5 @@ plot.nichehiking <- function(nichehiking){
     geom_point(alpha = 0.1) +
     geom_line() +
     xlab("Time (fire events)") +
-    facet_wrap(~ variable, ncol = 1, scales = "free")
+    facet_wrap(~ variable, ncol = 1)
 }
