@@ -1,6 +1,6 @@
-\name{symsymphoRcpp-package}
-\alias{symsymphoRcpp-package}
-\alias{symsymphoRcpp}
+\name{symsympho-package}
+\alias{symsympho-package}
+\alias{symsympho}
 \docType{package}
 \title{
   A short title line describing what the package does

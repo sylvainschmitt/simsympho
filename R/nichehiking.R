@@ -27,7 +27,8 @@ nichehiking <- function(
   sneigh = 3,
   bneigh = 3,
   mu = 0.00001,
-  r = 0.08
+  r = 0.08,
+  verbose = T
 ){
   res.l <- nichehiking_cpp(
     grid = grid, 
@@ -40,7 +41,8 @@ nichehiking <- function(
     sneigh = sneigh,
     bneigh = bneigh,
     mu = mu,
-    r = r
+    r = r,
+    verbose = verbose
     )
   res.df <- data.frame(
     age = res.l[[1]],

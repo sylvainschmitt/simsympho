@@ -6,8 +6,8 @@
 using namespace Rcpp;
 
 // nichehiking_cpp
-List nichehiking_cpp(int grid, double torch_init, int cycles, int agemax, int changePeriod, double mortRate, int pneigh, int sneigh, int bneigh, double mu, double r);
-RcppExport SEXP _symsympho_nichehiking_cpp(SEXP gridSEXP, SEXP torch_initSEXP, SEXP cyclesSEXP, SEXP agemaxSEXP, SEXP changePeriodSEXP, SEXP mortRateSEXP, SEXP pneighSEXP, SEXP sneighSEXP, SEXP bneighSEXP, SEXP muSEXP, SEXP rSEXP) {
+List nichehiking_cpp(int grid, double torch_init, int cycles, int agemax, int changePeriod, double mortRate, int pneigh, int sneigh, int bneigh, double mu, double r, bool verbose);
+RcppExport SEXP _symsympho_nichehiking_cpp(SEXP gridSEXP, SEXP torch_initSEXP, SEXP cyclesSEXP, SEXP agemaxSEXP, SEXP changePeriodSEXP, SEXP mortRateSEXP, SEXP pneighSEXP, SEXP sneighSEXP, SEXP bneighSEXP, SEXP muSEXP, SEXP rSEXP, SEXP verboseSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -22,13 +22,14 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< int >::type bneigh(bneighSEXP);
     Rcpp::traits::input_parameter< double >::type mu(muSEXP);
     Rcpp::traits::input_parameter< double >::type r(rSEXP);
-    rcpp_result_gen = Rcpp::wrap(nichehiking_cpp(grid, torch_init, cycles, agemax, changePeriod, mortRate, pneigh, sneigh, bneigh, mu, r));
+    Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
+    rcpp_result_gen = Rcpp::wrap(nichehiking_cpp(grid, torch_init, cycles, agemax, changePeriod, mortRate, pneigh, sneigh, bneigh, mu, r, verbose));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_symsympho_nichehiking_cpp", (DL_FUNC) &_symsympho_nichehiking_cpp, 11},
+    {"_symsympho_nichehiking_cpp", (DL_FUNC) &_symsympho_nichehiking_cpp, 12},
     {NULL, NULL, 0}
 };
 

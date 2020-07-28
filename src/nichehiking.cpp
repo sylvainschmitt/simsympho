@@ -23,7 +23,8 @@ List nichehiking_cpp(
     int sneigh = 3,
     int bneigh = 3,
     double mu = 0.00001,
-    double r = 0.08
+    double r = 0.08,
+    bool verbose = TRUE
 ) {
   
   DWS::set_randomizer_seed(-100);
@@ -49,19 +50,18 @@ List nichehiking_cpp(
 	LS.SetBurnNeighborhood(bneigh);
 	LS.Setr(r);
 	LS.SetMutationRate(mu);
-	std::cout << "new landscape" << std::endl;	
+	if(verbose) std::cout << "new landscape" << std::endl;	
 	for(int i = 0; i < agemax; ++i) {
 	  LS.RunForCycles(cycles);
-	  fit = LS.MeanFitness();
 	  LS.TorchDampFitness(TFitS, DFitS);
-	  std::cout << LS.Age() << '\t' << pneigh << '\t' << changePeriod << '\t' << mortRate << '\t' << LS.MeanFitness() << '\t' << fit << '\t' << LS.TorchProp() << std::endl;
+	  if(verbose) std::cout << LS.Age() << '\t' << pneigh << '\t' << changePeriod << '\t' << mortRate << '\t' << LS.MeanFitness() << '\t' << fit << '\t' << LS.TorchProp() << std::endl;
 	  age_vec[i] = LS.Age();
 	  tprop_vec[i] = LS.TorchProp();
 	  fit_vec[i] = LS.MeanFitness();
 	  tfit_vec[i] = TFitS.Mean();
 	  dfit_vec[i] = DFitS.Mean();
 	  if (LS.Age() == 100) { // 100
-	    std::cout << "Adding torches" << std::endl;
+	    if(verbose) std::cout << "Adding torches" << std::endl;
 	    LS.AddTorches(torch_init);
 	  }
 	  // if(LS.Age()==10007) {

@@ -76,12 +76,24 @@
 <a href="#simsympho" class="anchor"></a>simsympho</h1></div>
 <p><em>I should probably change the name later.</em></p>
 <p>This is a quick exploration of reusing the model from <a href="https://github.com/dschwilk/ms-data-Oikos-2002">Schwilt and Kerr (2002)</a> to model the eco-evolutionnary dynamics of <em>Symphonia globulifera</em> with topography and forest gaps dynamics based on PhD results.</p>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<pre><code><a href="https://devtools.r-lib.org//reference/remote-reexports.html">devtools::install_github("sylvainschmitt/simsympho")</a></code></pre>
+</div>
+<div id="test" class="section level2">
+<h2 class="hasAnchor">
+<a href="#test" class="anchor"></a>Test</h2>
+<pre><code>nichehiking(grid = 100, torch_init = 0.5, cycles = 1, agemax = 100) %&gt;% 
+  plot.nichehiking()</code></pre>
+</div>
 <div id="news" class="section level2">
 <h2 class="hasAnchor">
 <a href="#news" class="anchor"></a>News</h2>
 <ul>
 <li>started integration as <code>Rcpp</code> package</li>
 <li>fixed Rcpp</li>
+<li><code>pkgdown</code></li>
 </ul>
 </div>
 <div id="todo" class="section level2">
